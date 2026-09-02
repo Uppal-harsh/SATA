@@ -19,7 +19,7 @@ export function NextExperiment({ onOpenRSVP, audio }) {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.7 }}
         >
-          <div className="section-tag cyan">07 // UPCOMING PROTOCOL</div>
+          <div className="section-tag cyan">06 // UPCOMING INITIATIVES</div>
           <h2 className="section-title">The Next Experiment.</h2>
           <p className="section-description">
             Upcoming hackathons, workshops, and technical sprints organized by SATA. RSVP to secure on-campus lab access.

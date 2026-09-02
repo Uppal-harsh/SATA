@@ -15,65 +15,73 @@ export function EventDossierModal({ event, onClose, audio }) {
         onClick={onClose}
       >
         <motion.div 
-          className="modal-sheet"
-          initial={{ opacity: 0, scale: 0.95, y: 20 }}
+          className="modal-sheet dossier-sheet"
+          initial={{ opacity: 0, scale: 0.96, y: 15 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0.95, y: 20 }}
-          transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+          exit={{ opacity: 0, scale: 0.96, y: 15 }}
+          transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
           onClick={(e) => e.stopPropagation()}
         >
           <button 
             className="modal-close-btn" 
-            onClick={() => { audio.playClick(); onClose(); }}
-            aria-label="Close"
+            onClick={() => { audio?.playClick(); onClose(); }}
+            aria-label="Close modal"
           >
-            <X size={18} />
+            <X size={16} />
           </button>
 
+          {/* Dossier Header */}
           <div className="dossier-modal-header">
-            <div className="dossier-tag-row">
-              <span className="featured-badge amber">{event.categoryLabel.toUpperCase()}</span>
-              <span className="mono" style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>
-                DOSSIER // EVT-{event.number}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
+              <span className="featured-badge amber">{event.categoryLabel}</span>
+              <span className="mono" style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
+                EVT-{event.number} // ARCHIVE FILE
               </span>
             </div>
-            <h3 style={{ fontSize: '1.8rem', fontWeight: 800, marginTop: '8px', color: 'var(--text-primary)' }}>
+            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--text-primary)', lineHeight: 1.25 }}>
               {event.title}
             </h3>
-            <div style={{ color: 'var(--accent-cyan)', fontFamily: 'var(--font-mono)', fontSize: '0.9rem', marginTop: '4px' }}>
+            <p style={{ color: 'var(--accent-cyan)', fontSize: '0.9rem', marginTop: '4px', fontWeight: 500 }}>
               {event.subtitle}
+            </p>
+          </div>
+
+          {/* Key Metrics Grid */}
+          <div className="dossier-meta-grid">
+            <div className="dossier-meta-card">
+              <span className="dossier-meta-label">TIMELINE</span>
+              <span className="dossier-meta-value amber">{event.date}</span>
+            </div>
+            <div className="dossier-meta-card">
+              <span className="dossier-meta-label">VENUE</span>
+              <span className="dossier-meta-value">{event.venue}</span>
+            </div>
+            <div className="dossier-meta-card">
+              <span className="dossier-meta-label">IMPACT</span>
+              <span className="dossier-meta-value cyan">{event.participants}</span>
             </div>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '12px', marginTop: '20px' }}>
-            <div className="telemetry-item">
-              <span className="telemetry-label">TIMELINE</span>
-              <span className="telemetry-value amber">{event.date}</span>
-            </div>
-            <div className="telemetry-item">
-              <span className="telemetry-label">VENUE</span>
-              <span className="telemetry-value">{event.venue}</span>
-            </div>
-            <div className="telemetry-item">
-              <span className="telemetry-label">IMPACT</span>
-              <span className="telemetry-value cyan">{event.participants}</span>
-            </div>
-          </div>
-
-          <div style={{ marginTop: '24px' }}>
-            <h4 className="mono text-cyan" style={{ fontSize: '0.85rem', marginBottom: '8px' }}>TECHNICAL OVERVIEW</h4>
-            <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6, fontSize: '0.95rem' }}>
+          {/* Technical Overview */}
+          <div style={{ marginTop: '20px' }}>
+            <h4 style={{ fontSize: '0.8rem', fontFamily: 'var(--font-mono)', color: 'var(--accent-cyan)', letterSpacing: '0.08em', marginBottom: '6px' }}>
+              TECHNICAL OVERVIEW
+            </h4>
+            <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6, fontSize: '0.9rem' }}>
               {event.summary}
             </p>
           </div>
 
+          {/* Key Outcomes */}
           {event.outcomes && (
-            <div style={{ marginTop: '20px' }}>
-              <h4 className="mono text-amber" style={{ fontSize: '0.85rem', marginBottom: '8px' }}>KEY DELIVERABLES &amp; OUTCOMES</h4>
-              <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+            <div style={{ marginTop: '18px' }}>
+              <h4 style={{ fontSize: '0.8rem', fontFamily: 'var(--font-mono)', color: 'var(--accent-amber)', letterSpacing: '0.08em', marginBottom: '8px' }}>
+                KEY DELIVERABLES &amp; OUTCOMES
+              </h4>
+              <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '8px', padding: 0 }}>
                 {event.outcomes.map((o, idx) => (
-                  <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-                    <CheckCircle size={15} className="text-cyan" style={{ flexShrink: 0, marginTop: '3px' }} />
+                  <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', color: 'var(--text-secondary)', fontSize: '0.88rem', lineHeight: 1.45 }}>
+                    <CheckCircle size={15} className="text-cyan" style={{ flexShrink: 0, marginTop: '2px' }} />
                     <span>{o}</span>
                   </li>
                 ))}
@@ -81,12 +89,15 @@ export function EventDossierModal({ event, onClose, audio }) {
             </div>
           )}
 
+          {/* Organizing Squad */}
           {event.organizers && (
-            <div style={{ marginTop: '20px', paddingTop: '16px', borderTop: '1px solid var(--border-subtle)' }}>
-              <span className="mono" style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>ORGANIZING SQUAD:</span>
-              <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginTop: '8px' }}>
+            <div style={{ marginTop: '18px', paddingTop: '14px', borderTop: '1px solid var(--border-subtle)' }}>
+              <span style={{ fontSize: '0.72rem', fontFamily: 'var(--font-mono)', color: 'var(--text-muted)' }}>
+                ORGANIZING SQUAD
+              </span>
+              <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap', marginTop: '6px' }}>
                 {event.organizers.map(org => (
-                  <span key={org} className="pillar-tag-pill">{org}</span>
+                  <span key={org} className="pillar-tag-pill" style={{ fontSize: '0.72rem' }}>{org}</span>
                 ))}
               </div>
             </div>

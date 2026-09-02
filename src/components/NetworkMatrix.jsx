@@ -32,7 +32,7 @@ export function NetworkMatrix({ audio }) {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.7 }}
         >
-          <div className="section-tag cyan">06 // COMMUNITY ROSTER</div>
+          <div className="section-tag cyan">05 // COMMUNITY ROSTER</div>
           <h2 className="section-title">SATA Member Network.</h2>
           <p className="section-description">
             Active student contributors, working group leads, researchers, and engineers spanning multiple disciplines and batches.

@@ -1,44 +1,41 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { Terminal, Cpu, Palette, Users, ArrowRight } from 'lucide-react';
-import confetti from 'canvas-confetti';
+import { ExternalLink, Terminal, Cpu, Palette, Users, ArrowUpRight, CheckCircle2 } from 'lucide-react';
+import { ClickPowerupButton } from './ClickPowerupButton';
 
-export function JoinSata({ onIssuePass, audio }) {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    year: '1st Year Undergraduate',
-    track: 'Systems / Backend'
-  });
+export function JoinSata({ audio }) {
+  const nexusUrl = "https://nexus.bmu.edu.in";
 
   const tracks = [
-    { id: 'Systems / Backend', label: 'Systems / Backend', icon: Terminal },
-    { id: 'Hardware / Embedded', label: 'Hardware / Embedded', icon: Cpu },
-    { id: 'Design / Experience', label: 'Design / Experience', icon: Palette },
-    { id: 'Operations / Outreach', label: 'Operations / Outreach', icon: Users }
+    {
+      code: "TRACK // 01",
+      title: "Systems & Architecture",
+      desc: "Low-level microkernels, distributed networks, Rust/C++ pipelines, and cloud systems.",
+      icon: Terminal,
+      color: "var(--accent-amber)"
+    },
+    {
+      code: "TRACK // 02",
+      title: "Hardware & Robotics",
+      desc: "Custom PCB design, ESP32/RISC-V firmware, sensor fusion, and autonomous drones.",
+      icon: Cpu,
+      color: "var(--accent-cyan)"
+    },
+    {
+      code: "TRACK // 03",
+      title: "Content & Visual Design",
+      desc: "UI/UX interaction design, 3D graphics, technical brand media, and editorial writing.",
+      icon: Palette,
+      color: "var(--accent-amber)"
+    },
+    {
+      code: "TRACK // 04",
+      title: "Operations & Management",
+      desc: "Flagship hackathon production, event orchestration, community growth, and PR.",
+      icon: Users,
+      color: "var(--accent-cyan)"
+    }
   ];
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!formData.name || !formData.email) return;
-
-    audio.playSuccess();
-    try {
-      confetti({
-        particleCount: 75,
-        spread: 60,
-        origin: { y: 0.8 },
-        colors: ['#F4C542', '#58D8D5', '#FFFFFF']
-      });
-    } catch (err) {}
-
-    onIssuePass({
-      name: formData.name,
-      email: formData.email,
-      role: formData.year,
-      track: formData.track
-    });
-  };
 
   return (
     <section className="join-section" id="join">
@@ -50,111 +47,99 @@ export function JoinSata({ onIssuePass, audio }) {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.7 }}
         >
-          <div className="section-tag amber">08 // INITIATION PROTOCOL</div>
+          <div className="section-tag amber">07 // REGISTRATION GATEWAY</div>
           <h2 className="section-title">Join The SATA Network.</h2>
           <p className="section-description">
-            We are looking for self-directed builders, low-level programmers, hardware tinkerers, UI designers, and technical writers ready to ship real projects.
+            Official recruitment, project team intake, and active memberships for SATA are processed directly through BML Munjal University's Nexus portal.
           </p>
         </motion.div>
 
-        {/* Form Container */}
+        {/* BMU Nexus Gateway Card */}
         <motion.div 
-          className="join-form-wrapper"
-          initial={{ opacity: 0, y: 30 }}
+          className="nexus-gateway-card"
+          initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.7 }}
         >
-          <form className="join-form" onSubmit={handleSubmit}>
-            <div className="form-header-bar">
-              <span className="mono" style={{ fontSize: '0.8rem', color: 'var(--accent-amber)' }}>
-                REGISTRATION PORTAL // PROTOCOL V-2026
-              </span>
+          <div className="nexus-header-row">
+            <div className="nexus-badge-group">
+              <span className="nexus-portal-badge">OFFICIAL UNIVERSITY PORTAL</span>
+              <span className="mono text-cyan" style={{ fontSize: '0.8rem' }}>NEXUS.BMU.EDU.IN</span>
+            </div>
+            <span className="nexus-status-pill">
+              <span className="status-dot"></span> RECRUITMENT OPEN // 2026 SPRINT
+            </span>
+          </div>
+
+          <div className="nexus-main-content">
+            <h3 className="nexus-heading">
+              Ready to build systems, hack hardware, and ship real projects?
+            </h3>
+            <p className="nexus-subtext">
+              Log in to the BMU Nexus portal with your university credentials, navigate to <strong>Student Clubs → SATA</strong>, and submit your preference for our active working tracks.
+            </p>
+
+            {/* Track Highlights Grid */}
+            <div className="nexus-tracks-grid">
+              {tracks.map((t) => {
+                const Icon = t.icon;
+                return (
+                  <div key={t.code} className="nexus-track-item">
+                    <div className="nexus-track-top">
+                      <span className="mono" style={{ fontSize: '0.72rem', color: t.color }}>{t.code}</span>
+                      <Icon size={16} style={{ color: t.color }} />
+                    </div>
+                    <h4 className="nexus-track-title">{t.title}</h4>
+                    <p className="nexus-track-desc">{t.desc}</p>
+                  </div>
+                );
+              })}
             </div>
 
-            <div className="form-grid">
-              {/* Full Name */}
-              <div className="form-group">
-                <label className="form-label">STUDENT FULL NAME *</label>
-                <input
-                  type="text"
-                  required
-                  placeholder="e.g. Aryan Gupta"
-                  className="form-input"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                />
+            {/* Instructions list */}
+            <div className="nexus-steps-box">
+              <div className="nexus-step">
+                <CheckCircle2 size={16} className="text-cyan" />
+                <span><strong>Step 1:</strong> Authenticate with your <code>@bmu.edu.in</code> student account.</span>
               </div>
-
-              {/* Email */}
-              <div className="form-group">
-                <label className="form-label">CAMPUS / PERSONAL EMAIL *</label>
-                <input
-                  type="email"
-                  required
-                  placeholder="name@university.edu"
-                  className="form-input"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                />
+              <div className="nexus-step">
+                <CheckCircle2 size={16} className="text-cyan" />
+                <span><strong>Step 2:</strong> Select <em>Science and Technology Appreciation Club (SATA)</em>.</span>
               </div>
-
-              {/* Academic Year */}
-              <div className="form-group full-width">
-                <label className="form-label">ACADEMIC STAGE *</label>
-                <select
-                  className="form-select"
-                  value={formData.year}
-                  onChange={(e) => setFormData({ ...formData, year: e.target.value })}
-                >
-                  <option value="1st Year Undergraduate">1st Year Undergraduate</option>
-                  <option value="2nd Year Undergraduate">2nd Year Undergraduate</option>
-                  <option value="3rd Year Undergraduate">3rd Year Undergraduate</option>
-                  <option value="4th Year Undergraduate">4th Year Undergraduate</option>
-                  <option value="Postgraduate / Researcher">Postgraduate / Researcher</option>
-                </select>
-              </div>
-
-              {/* Primary Track Selection */}
-              <div className="form-group full-width">
-                <label className="form-label">PRIMARY INTEREST TRACK *</label>
-                <div className="track-select-grid">
-                  {tracks.map((t) => {
-                    const Icon = t.icon;
-                    const isSelected = formData.track === t.id;
-                    return (
-                      <div
-                        key={t.id}
-                        className={`track-card ${isSelected ? 'selected' : ''}`}
-                        onClick={() => {
-                          audio.playClick();
-                          setFormData({ ...formData, track: t.id });
-                        }}
-                      >
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                          <Icon size={16} className={isSelected ? 'text-cyan' : ''} />
-                          <span className="track-name">{t.label}</span>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
+              <div className="nexus-step">
+                <CheckCircle2 size={16} className="text-cyan" />
+                <span><strong>Step 3:</strong> Choose your primary track and attach your project repository or portfolio.</span>
               </div>
             </div>
 
-            <motion.button 
-              type="submit" 
-              className="btn btn-amber btn-full"
-              style={{ marginTop: '24px' }}
-              whileHover={{ scale: 1.02, y: -2 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              <span>SUBMIT APPLICATION &amp; GENERATE PASS</span>
-              <ArrowRight size={14} />
-            </motion.button>
-          </form>
+            {/* Action Buttons Row */}
+            <div className="nexus-actions-row">
+              <a
+                href={nexusUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-amber btn-large"
+                onClick={() => audio?.playSuccess()}
+                style={{ textDecoration: 'none' }}
+              >
+                <span>APPLY VIA BMU NEXUS PORTAL</span>
+                <ArrowUpRight size={18} />
+              </a>
+
+              <a
+                href="#network"
+                className="btn btn-outline"
+                onClick={() => audio?.playClick()}
+                style={{ textDecoration: 'none' }}
+              >
+                <span>EXPLORE MEMBER NETWORK [↓]</span>
+              </a>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>
   );
 }
+

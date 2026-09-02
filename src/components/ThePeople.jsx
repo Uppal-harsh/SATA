@@ -14,7 +14,7 @@ export function ThePeople({ audio }) {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.7 }}
         >
-          <div className="section-tag amber">05 // LEADERSHIP PANEL</div>
+          <div className="section-tag amber">04 // LEADERSHIP PANEL</div>
           <h2 className="section-title">The People Behind SATA.</h2>
           <p className="section-description">
             The student architects, system leads, designers, and organizers responsible for steering SATA's technical roadmap and initiatives.

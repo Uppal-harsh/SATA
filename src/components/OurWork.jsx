@@ -49,7 +49,7 @@ export function OurWork({ audio }) {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.7 }}
         >
-          <div className="section-tag amber">04 // WHAT WE DO &amp; SHIP</div>
+          <div className="section-tag amber">03 // CORE PROJECTS &amp; LABS</div>
           <h2 className="section-title">Our Work &amp; Repositories.</h2>
           <p className="section-description">
             SATA is structured into four core pillars. Everything we build is open source, peer-reviewed, and deployed to production.

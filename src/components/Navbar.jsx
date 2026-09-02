@@ -100,11 +100,11 @@ export function Navbar({ liveClock, audio, onOpenSearch, onOpenJoin }) {
               variant="cyan"
               audio={audio}
               onClick={() => {
-                window.location.hash = '#join';
+                window.open('https://nexus.bmu.edu.in', '_blank', 'noopener,noreferrer');
               }}
               style={{ padding: '8px 18px', fontSize: '0.82rem' }}
             >
-              JOIN SATA →
+              JOIN SATA ↗
             </ClickPowerupButton>
 
             {/* Mobile Menu Toggle */}
@@ -140,11 +140,13 @@ export function Navbar({ liveClock, audio, onOpenSearch, onOpenJoin }) {
               </a>
             ))}
             <a 
-              href="#join" 
+              href="https://nexus.bmu.edu.in" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="mobile-nav-link text-cyan"
               onClick={() => { audio.playClick(); setMobileOpen(false); }}
             >
-              08 // JOIN SATA →
+              07 // JOIN SATA ON NEXUS ↗
             </a>
           </motion.div>
         )}

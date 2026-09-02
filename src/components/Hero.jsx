@@ -60,10 +60,10 @@ export function Hero({ audio }) {
                 variant="amber"
                 audio={audio}
                 onClick={() => {
-                  window.location.hash = '#archive';
+                  window.open('https://nexus.bmu.edu.in', '_blank', 'noopener,noreferrer');
                 }}
               >
-                <span>VIEW EVENT ARCHIVE</span>
+                <span>JOIN VIA BMU NEXUS ↗</span>
                 <ArrowRight size={14} />
               </ClickPowerupButton>
 
@@ -144,7 +144,7 @@ export function Hero({ audio }) {
               </button>
             </div>
 
-            <div className="hero-emblem-wrapper" style={{ height: '400px', position: 'relative' }}>
+            <div className="hero-emblem-wrapper" style={{ height: '350px', position: 'relative' }}>
               {activeTab === 'emblem' ? (
                 <>
                   {/* Orbiting Reticles */}
@@ -177,18 +177,18 @@ export function Hero({ audio }) {
                     FIBONACCI SPHERE // AMBER CORE
                   </div>
                   <div className="emblem-annotation bottom-right" style={{ color: 'var(--accent-cyan)' }}>
-                    KEPLER ORBIT // CYAN RINGS [DRAGGABLE]
+                    KEPLER ORBIT // CYAN RINGS
                   </div>
                   <ParticleSaturn
                     coreColor="#F4C542"
                     ringColor="#58D8D5"
-                    density={20}
-                    particleSize={14}
-                    glow={22}
+                    density={18}
+                    particleSize={12}
+                    glow={20}
                     tilt={16}
                     roll={14}
-                    spinSpeed={8}
-                    sizePercent={130}
+                    spinSpeed={6}
+                    sizePercent={96}
                     style={{ width: '100%', height: '100%' }}
                   />
                 </div>

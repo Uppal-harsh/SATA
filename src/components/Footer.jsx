@@ -39,7 +39,7 @@ export function Footer({ audio }) {
             <ul className="footer-link-list">
               <li><a href="#network" className="footer-link" onClick={() => audio.playClick()}>Member Matrix</a></li>
               <li><a href="#experiments" className="footer-link" onClick={() => audio.playClick()}>Next Experiment</a></li>
-              <li><a href="#join" className="footer-link" onClick={() => audio.playClick()}>Join SATA</a></li>
+              <li><a href="https://nexus.bmu.edu.in" target="_blank" rel="noopener noreferrer" className="footer-link">Apply on BMU Nexus ↗</a></li>
               <li><a href="https://github.com" target="_blank" rel="noopener noreferrer" className="footer-link">GitHub Organization</a></li>
               <li><a href="https://discord.com" target="_blank" rel="noopener noreferrer" className="footer-link">Discord Server</a></li>
             </ul>

@@ -30,9 +30,8 @@ export function CommandPalette({ isOpen, onClose, onSelectEvent, audio }) {
     { title: "Taksh Yadav — Marketing and Communications", category: "Roster", type: "nav", href: "#network", icon: User },
     { title: "Rishita Roy — Marketing and Communications", category: "Roster", type: "nav", href: "#network", icon: User },
     { title: "Shubhi Vajpayee — Coverage & Social Media", category: "Roster", type: "nav", href: "#network", icon: User },
-    { title: "Sneha Jangra — Coverage & Social Media", category: "Roster", type: "nav", href: "#network", icon: User },
     { title: "Next Experiment: AI Build Night", category: "Upcoming", type: "nav", href: "#experiments", icon: Calendar },
-    { title: "Join SATA Application Form", category: "Membership", type: "nav", href: "#join", icon: BookOpen }
+    { title: "Apply via BMU Nexus (nexus.bmu.edu.in)", category: "Membership", type: "external", url: "https://nexus.bmu.edu.in", icon: BookOpen }
   ];
 
   const filteredItems = searchItems.filter(item =>
@@ -66,6 +65,8 @@ export function CommandPalette({ isOpen, onClose, onSelectEvent, audio }) {
     onClose();
     if (item.type === 'event') {
       onSelectEvent(item.data);
+    } else if (item.type === 'external' && item.url) {
+      window.open(item.url, '_blank', 'noopener,noreferrer');
     } else if (item.href) {
       window.location.hash = item.href;
     }

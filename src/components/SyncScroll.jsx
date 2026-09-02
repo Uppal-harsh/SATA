@@ -14,7 +14,7 @@ export default function SyncScroll({
     textAlign: "left",
   },
   textColor = "#F2F0E8",
-  baseVelocity = 35,
+  baseVelocity = 5,
   direction = "left",
   gap = 48,
   style,

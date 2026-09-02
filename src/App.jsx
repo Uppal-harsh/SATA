@@ -7,10 +7,8 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import SyncScroll from './components/SyncScroll';
 import { WhatIsSata } from './components/WhatIsSata';
-import { FluidTextSection } from './components/FluidTextSection';
 import { Numbers } from './components/Numbers';
 import { EventArchive } from './components/EventArchive';
-import { FeaturedEvent } from './components/FeaturedEvent';
 import { OurWork } from './components/OurWork';
 import { ThePeople } from './components/ThePeople';
 import { NetworkMatrix } from './components/NetworkMatrix';
@@ -59,7 +57,7 @@ export function App() {
         {/* Section 01: Hero with 3D Quantum Orbit & Click Powerups */}
         <Hero audio={audio} />
 
-        {/* Velocity-Driven Marquee 01 */}
+        {/* Velocity-Driven Marquee */}
         <SyncScroll
           words={[
             "SCIENCE",
@@ -71,49 +69,29 @@ export function App() {
             "HARDWARE",
             "AUTONOMOUS LABS"
           ]}
-          baseVelocity={35}
+          baseVelocity={5}
           direction="left"
         />
 
-        {/* Section 02: What is SATA (Dual Engine) */}
+        {/* Section 01: What is SATA (Dual Engine) */}
         <WhatIsSata audio={audio} />
 
-        {/* Section 03: Quantum Fluid Typography Lab */}
-        <FluidTextSection audio={audio} />
-
-        {/* Section 04: Numbers & Telemetry */}
+        {/* Key Telemetry Numbers */}
         <Numbers />
 
-        {/* Section 05: Event Archive */}
+        {/* Section 02: Event Archive */}
         <EventArchive onSelectEvent={setSelectedEvent} audio={audio} />
 
-        {/* Section 06: Featured Event Case File */}
-        <FeaturedEvent onSelectEvent={setSelectedEvent} audio={audio} />
-
-        {/* Section 07: Our Work & Repositories */}
+        {/* Section 03: Our Work & Repositories */}
         <OurWork audio={audio} />
 
-        {/* Velocity-Driven Marquee 02 */}
-        <SyncScroll
-          words={[
-            "IDEAS BECOME SYSTEMS",
-            "STUDENT INNOVATION",
-            "PROTOTYPING",
-            "OPEN SOURCE",
-            "EDGE AI",
-            "ROBOTICS"
-          ]}
-          baseVelocity={40}
-          direction="right"
-        />
-
-        {/* Section 08: Leadership Panel */}
+        {/* Section 04: Leadership Panel */}
         <ThePeople audio={audio} />
 
-        {/* Section 09: SATA Network Matrix */}
+        {/* Section 05: SATA Network Matrix */}
         <NetworkMatrix audio={audio} />
 
-        {/* Section 10: Next Experiment Protocol */}
+        {/* Section 06: Next Experiment Protocol */}
         <NextExperiment 
           onOpenRSVP={(exp) => {
             setPassData({
@@ -126,8 +104,8 @@ export function App() {
           audio={audio}
         />
 
-        {/* Section 11: Join SATA Initiation Form */}
-        <JoinSata onIssuePass={setPassData} audio={audio} />
+        {/* Section 07: Join SATA Official BMU Nexus Gateway */}
+        <JoinSata audio={audio} />
       </main>
 
       {/* Footer */}
