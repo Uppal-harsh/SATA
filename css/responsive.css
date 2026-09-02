@@ -1,0 +1,240 @@
+/* ==========================================================================
+   SATA RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+
+/* Laptop & Medium Displays */
+@media (max-width: 1200px) {
+  .hero-grid-layout {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  
+  .numbers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .people-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .archive-row {
+    grid-template-columns: 60px 140px 1.4fr 1fr 120px;
+    gap: 16px;
+  }
+}
+
+/* Tablet Screens */
+@media (max-width: 992px) {
+  :root {
+    --section-padding-y: 80px;
+  }
+
+  .nav-center {
+    display: none;
+  }
+
+  .mobile-nav-toggle {
+    display: flex;
+  }
+
+  /* Mobile Drawer Menu */
+  .mobile-drawer {
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - var(--nav-height));
+    background: rgba(8, 11, 13, 0.98);
+    backdrop-filter: blur(20px);
+    z-index: 99;
+    padding: 36px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border-bottom: 1px solid var(--border-default);
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform var(--transition-normal), opacity var(--transition-normal);
+  }
+
+  .mobile-drawer.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .mobile-nav-link {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-main);
+    text-decoration: none;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .mobile-nav-link:hover {
+    color: var(--accent-cyan);
+  }
+
+  .hero-grid-layout {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-left-content {
+    align-items: center;
+  }
+
+  .hero-system-dossier {
+    justify-content: center;
+  }
+
+  .hero-cta-row {
+    justify-content: center;
+  }
+
+  .hero-visual-center {
+    order: -1;
+    margin-bottom: 20px;
+  }
+
+  .hero-emblem-wrapper {
+    max-width: 320px;
+  }
+
+  .split-container {
+    grid-template-columns: 1fr;
+  }
+
+  .case-file-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .case-file-visual {
+    border-right: none;
+    border-bottom: 1px solid var(--border-default);
+    aspect-ratio: 16/9;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experiment-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .join-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 768px) {
+  .container, .container-wide, .nav-container {
+    padding: 0 20px;
+  }
+
+  .hero-telemetry-bar {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .numbers-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pillars-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .people-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Responsive Archive Timeline to Stacked Cards */
+  .archive-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 24px 16px;
+  }
+
+  .archive-row-meta {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .archive-row-action {
+    width: 100%;
+    justify-content: flex-start;
+    margin-top: 8px;
+  }
+
+  /* Network Directory on Mobile */
+  .network-table-header {
+    display: none;
+  }
+
+  .network-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 18px 16px;
+  }
+
+  .network-controls-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .network-search-input {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .case-file-content {
+    padding: 32px 20px;
+  }
+
+  .case-file-meta-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experiment-card {
+    padding: 36px 20px;
+  }
+
+  .countdown-digits-row {
+    gap: 8px;
+  }
+
+  .cd-val {
+    font-size: 1.8rem;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

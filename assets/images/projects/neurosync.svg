@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="p3-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#11171A" />
+      <stop offset="100%" stop-color="#080B0D" />
+    </linearGradient>
+    <radialGradient id="p3-cyan" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#58D8D5" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#58D8D5" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="600" height="380" fill="url(#p3-bg)" stroke="#252D30" stroke-width="1.5" />
+  <rect width="600" height="380" fill="url(#p3-cyan)" />
+
+  <!-- EEG Brainwave Analysis Blueprint -->
+  <g transform="translate(60, 30)">
+    <!-- 8-Channel EEG Waveforms -->
+    <g stroke="#58D8D5" stroke-width="1.8" fill="none">
+      <path d="M 0,30 Q 30,10 60,30 T 120,30 T 180,10 T 240,45 T 300,30 T 360,20 T 420,30 T 480,30" />
+      <path d="M 0,70 Q 20,90 50,70 T 110,50 T 170,85 T 230,70 T 290,60 T 350,75 T 410,70 T 480,70" stroke="#F4C542" />
+      <path d="M 0,110 Q 40,130 80,110 T 160,95 T 240,120 T 320,105 T 400,110 T 480,110" />
+      <path d="M 0,150 Q 25,135 50,150 T 100,165 T 150,140 T 200,155 T 250,150 T 300,135 T 400,150 T 480,150" stroke="#F4C542" />
+    </g>
+
+    <!-- DSP Filter Pipeline -->
+    <g transform="translate(40, 185)">
+      <rect x="0" y="0" width="400" height="45" rx="2" fill="#0E1315" stroke="#252D30" />
+      <text x="15" y="28" font-family="'JetBrains Mono', monospace" font-size="11" fill="#58D8D5">BANDPASS (0.5-50Hz) -&gt; FFT SPECTRAL DENSITY -&gt; 98.4% INTENT ACCURACY</text>
+    </g>
+  </g>
+
+  <!-- Project Header Bar -->
+  <rect x="20" y="290" width="560" height="70" rx="4" fill="#0E1315" stroke="#252D30" />
+  <text x="35" y="320" font-family="'Space Grotesk', sans-serif" font-size="18" font-weight="bold" fill="#F2F0E8">NeuroSync — Low-Latency BCI Interface</text>
+  <text x="35" y="344" font-family="'JetBrains Mono', monospace" font-size="11" fill="#58D8D5">PYTHON // PYTORCH // ADS1299 EEG AFE // WEBSOCKET STREAMING</text>
+</svg>

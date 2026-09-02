@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="dt-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14181B" />
+      <stop offset="100%" stop-color="#080B0D" />
+    </linearGradient>
+    <radialGradient id="dt-amb" cx="30%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#F4C542" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#F4C542" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#dt-bg)" />
+  <rect width="800" height="500" fill="url(#dt-amb)" />
+
+  <!-- Distributed Graph Nodes Mesh -->
+  <g transform="translate(100, 60)" stroke="#252D30" stroke-width="1.5" fill="none">
+    <!-- Outer Hex Cluster -->
+    <polygon points="300,40 460,90 520,220 420,300 240,280 180,150" stroke="#F4C542" stroke-width="1.5" stroke-dasharray="6 4" />
+    
+    <!-- Central Consensus Node -->
+    <circle cx="340" cy="180" r="32" fill="#151A1C" stroke="#F4C542" stroke-width="3" />
+    <text x="318" y="186" font-family="'JetBrains Mono', monospace" font-size="11" fill="#F4C542">RAFT</text>
+    
+    <!-- Peer Nodes -->
+    <circle cx="300" cy="40" r="18" fill="#101416" stroke="#58D8D5" stroke-width="2" />
+    <circle cx="460" cy="90" r="18" fill="#101416" stroke="#F4C542" stroke-width="2" />
+    <circle cx="520" cy="220" r="18" fill="#101416" stroke="#58D8D5" stroke-width="2" />
+    <circle cx="420" cy="300" r="18" fill="#101416" stroke="#F4C542" stroke-width="2" />
+    <circle cx="240" cy="280" r="18" fill="#101416" stroke="#58D8D5" stroke-width="2" />
+    <circle cx="180" cy="150" r="18" fill="#101416" stroke="#F4C542" stroke-width="2" />
+
+    <!-- Links to core -->
+    <line x1="340" y1="180" x2="300" y2="40" stroke="#58D8D5" />
+    <line x1="340" y1="180" x2="460" y2="90" stroke="#F4C542" />
+    <line x1="340" y1="180" x2="520" y2="220" stroke="#58D8D5" />
+    <line x1="340" y1="180" x2="420" y2="300" stroke="#F4C542" />
+    <line x1="340" y1="180" x2="240" y2="280" stroke="#58D8D5" />
+    <line x1="340" y1="180" x2="180" y2="150" stroke="#F4C542" />
+  </g>
+
+  <!-- Overlay Box -->
+  <rect x="80" y="380" width="640" height="85" rx="4" fill="#0D1113" stroke="#252D30" />
+  <text x="105" y="415" font-family="'Space Grotesk', sans-serif" font-size="20" font-weight="bold" fill="#F2F0E8">DECENTRALIZED PROTOCOLS &amp; SYSTEMS</text>
+  <text x="105" y="445" font-family="'JetBrains Mono', monospace" font-size="12" fill="#F4C542">KEYNOTE &amp; PANEL // BYZANTINE FAULT TOLERANCE // 110 ATTENDEES</text>
+  <text x="610" y="430" font-family="'JetBrains Mono', monospace" font-size="12" fill="#58D8D5">NOV 2025</text>
+</svg>

@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="100%" height="100%">
+  <defs>
+    <linearGradient id="event-grad-1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#151A1C" />
+      <stop offset="50%" stop-color="#0E1214" />
+      <stop offset="100%" stop-color="#080B0D" />
+    </linearGradient>
+    <radialGradient id="hackathon-amber" cx="30%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#F4C542" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#F4C542" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="hackathon-cyan" cx="80%" cy="60%" r="50%">
+      <stop offset="0%" stop-color="#58D8D5" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#58D8D5" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <style>
+    .mono { font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8D9699; }
+    .title { font-family: 'Space Grotesk', sans-serif; font-size: 38px; font-weight: 800; fill: #F2F0E8; }
+    .tag { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: bold; fill: #F4C542; }
+  </style>
+
+  <!-- Background Canvas -->
+  <rect width="1200" height="700" fill="url(#event-grad-1)" />
+  <rect width="1200" height="700" fill="url(#hackathon-amber)" />
+  <rect width="1200" height="700" fill="url(#hackathon-cyan)" />
+
+  <!-- Laboratory Grid Lines -->
+  <g stroke="#1F2629" stroke-width="1">
+    <line x1="0" y1="140" x2="1200" y2="140" stroke-dasharray="6 6" />
+    <line x1="0" y1="560" x2="1200" y2="560" stroke-dasharray="6 6" />
+    <line x1="200" y1="0" x2="200" y2="700" stroke-dasharray="6 6" />
+    <line x1="1000" y1="0" x2="1000" y2="700" stroke-dasharray="6 6" />
+  </g>
+
+  <!-- Central Visual: Realistic Hackathon Late-Night Collaboration Workspace Blueprint -->
+  <g transform="translate(160, 100)">
+    <!-- Workbench Outline -->
+    <rect x="0" y="0" width="880" height="460" rx="4" fill="#101416" stroke="#252D30" stroke-width="1.5" />
+    
+    <!-- Code Terminal Station Left -->
+    <rect x="40" y="40" width="360" height="240" rx="4" fill="#0A0D0F" stroke="#2A3337" stroke-width="1" />
+    <rect x="40" y="40" width="360" height="28" fill="#151A1C" />
+    <circle cx="58" cy="54" r="4" fill="#F4C542" />
+    <circle cx="72" cy="54" r="4" fill="#58D8D5" />
+    <circle cx="86" cy="54" r="4" fill="#3A464B" />
+    <text x="106" y="58" class="mono" font-size="10" fill="#8D9699">main.rs // buildathon-eval</text>
+    
+    <!-- Terminal Lines -->
+    <text x="56" y="96" class="mono" font-size="11" fill="#58D8D5">&gt; cargo build --release --target satamesh-v1</text>
+    <text x="56" y="118" class="mono" font-size="11" fill="#F2F0E8">   Compiling sensor-fusion v0.4.2</text>
+    <text x="56" y="140" class="mono" font-size="11" fill="#F2F0E8">   Compiling edge-infer-node v1.1.0</text>
+    <text x="56" y="162" class="mono" font-size="11" fill="#F4C542">   [OK] Hardware handshake verified on UART0</text>
+    <text x="56" y="184" class="mono" font-size="11" fill="#8D9699">   Telemetry latency: 1.42ms | Packets: 14,280/14,280</text>
+    <text x="56" y="210" class="mono" font-size="11" fill="#58D8D5">&gt; Running team demo pipeline [NODE 07-B]...</text>
+    <text x="56" y="235" class="mono" font-size="11" fill="#FFF2A3">&gt;&gt;&gt; STATUS: PROTOTYPE LIVE FOR JURY DEMO</text>
+
+    <!-- Hardware Breadboard / Circuit Rig Right -->
+    <rect x="440" y="40" width="400" height="240" rx="4" fill="#0D1214" stroke="#2A3337" stroke-width="1" />
+    <rect x="440" y="40" width="400" height="28" fill="#151A1C" />
+    <text x="458" y="58" class="mono" font-size="10" fill="#F4C542">HARDWARE BENCH // ESP32-S3 SENSOR RIG</text>
+    
+    <!-- Breadboard graphics -->
+    <g stroke="#252D30" stroke-width="1" fill="none">
+      <rect x="465" y="85" width="220" height="170" rx="2" fill="#121719" stroke="#313C40" />
+      <!-- IC Chip -->
+      <rect x="520" y="130" width="110" height="60" rx="2" fill="#080B0D" stroke="#58D8D5" stroke-width="1.5" />
+      <text x="532" y="165" class="mono" font-size="9" fill="#58D8D5">SATA-CORE-MCU</text>
+      <!-- Circuit pins & glowing LED traces -->
+      <path d="M 490,110 L 520,135 M 490,140 L 520,145 M 490,170 L 520,165 M 490,200 L 520,180" stroke="#F4C542" stroke-width="1.5" />
+      <circle cx="490" cy="110" r="3" fill="#F4C542" />
+      <circle cx="490" cy="140" r="3" fill="#F4C542" />
+      <circle cx="490" cy="170" r="3" fill="#F4C542" />
+      <circle cx="490" cy="200" r="3" fill="#F4C542" />
+      
+      <!-- Cyan bus traces -->
+      <path d="M 630,145 L 670,145 L 670,110" stroke="#58D8D5" stroke-width="1.5" />
+      <circle cx="670" cy="110" r="3" fill="#58D8D5" />
+      <path d="M 630,165 L 670,165 L 670,210" stroke="#58D8D5" stroke-width="1.5" />
+      <circle cx="670" cy="210" r="3" fill="#58D8D5" />
+      
+      <!-- Oscilloscope Waveform Display Right -->
+      <rect x="700" y="85" width="120" height="170" rx="2" fill="#080B0D" stroke="#252D30" />
+      <path d="M 705,170 Q 720,130 735,170 T 765,170 T 795,170 T 815,170" stroke="#58D8D5" stroke-width="2" fill="none" />
+      <text x="715" y="105" class="mono" font-size="8" fill="#8D9699">CH1 200mV</text>
+      <text x="715" y="240" class="mono" font-size="8" fill="#58D8D5">144.20 MHz</text>
+    </g>
+
+    <!-- Bottom Event Metadata Row -->
+    <rect x="40" y="310" width="800" height="120" rx="4" fill="#151A1C" stroke="#252D30" stroke-width="1" />
+    <g transform="translate(65, 335)">
+      <text x="0" y="22" class="tag">FLAGSHIP HACKATHON</text>
+      <text x="0" y="60" class="title" font-size="28">BUILDATHON &apos;26</text>
+      <text x="0" y="88" class="mono" font-size="12">48-HOUR SPRINT // 128 STUDENT HACKERS // 24 DEPLOYED REPOSITORIES</text>
+
+      <g transform="translate(560, 10)">
+        <text x="0" y="15" class="mono" font-size="11" fill="#8D9699">DATE RECORDED</text>
+        <text x="0" y="38" class="mono" font-size="15" font-weight="bold" fill="#F2F0E8">14—16 FEB 2026</text>
+        <text x="0" y="65" class="mono" font-size="11" fill="#F4C542">VENUE: INNOVATION HUB</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Outer Technical Reticle Overlay -->
+  <g stroke="#F4C542" stroke-width="1.5" fill="none">
+    <path d="M 140,80 L 140,60 L 160,60" />
+    <path d="M 1060,80 L 1060,60 L 1040,60" />
+    <path d="M 140,580 L 140,600 L 160,600" />
+    <path d="M 1060,580 L 1060,600 L 1040,600" />
+  </g>
+
+  <text x="140" y="45" class="mono" fill="#F4C542">ARCHIVE FILE: SATA-EV-07 // RESTRICTED ACCESS</text>
+  <text x="920" y="45" class="mono" fill="#58D8D5">STATUS: COMPLETE / VERIFIED</text>
+</svg>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="os-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111619" />
+      <stop offset="100%" stop-color="#080B0D" />
+    </linearGradient>
+    <radialGradient id="os-cyan" cx="40%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#58D8D5" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#58D8D5" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#os-bg)" />
+  <rect width="800" height="500" fill="url(#os-cyan)" />
+
+  <!-- Git Commit Graph Visual -->
+  <g transform="translate(140, 70)">
+    <!-- Branch Lines -->
+    <line x1="80" y1="80" x2="440" y2="80" stroke="#58D8D5" stroke-width="3" />
+    <path d="M 160,80 Q 200,160 260,160 L 380,160 Q 420,160 440,80" fill="none" stroke="#F4C542" stroke-width="2.5" />
+    <line x1="80" y1="80" x2="80" y2="240" stroke="#252D30" stroke-width="1.5" stroke-dasharray="4 4" />
+    
+    <!-- Commits -->
+    <circle cx="80" cy="80" r="10" fill="#151A1C" stroke="#58D8D5" stroke-width="3" />
+    <circle cx="160" cy="80" r="10" fill="#151A1C" stroke="#58D8D5" stroke-width="3" />
+    <circle cx="260" cy="160" r="9" fill="#151A1C" stroke="#F4C542" stroke-width="3" />
+    <circle cx="340" cy="160" r="9" fill="#151A1C" stroke="#F4C542" stroke-width="3" />
+    <circle cx="380" cy="80" r="10" fill="#151A1C" stroke="#58D8D5" stroke-width="3" />
+    <circle cx="440" cy="80" r="14" fill="#58D8D5" stroke="#FFF2A3" stroke-width="3" />
+
+    <text x="70" y="55" font-family="'JetBrains Mono', monospace" font-size="10" fill="#8D9699">main: init</text>
+    <text x="240" y="195" font-family="'JetBrains Mono', monospace" font-size="10" fill="#F4C542">feature/kernel-sync</text>
+    <text x="420" y="55" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold" fill="#58D8D5">v2.0.0-RELEASE</text>
+
+    <!-- Contribution Matrix snippet -->
+    <g transform="translate(40, 220)">
+      <rect x="0" y="0" width="440" height="50" rx="3" fill="#0E1315" stroke="#252D30" />
+      <text x="20" y="30" font-family="'JetBrains Mono', monospace" font-size="11" fill="#8D9699">MERGED PRs: 142 | FORKS: 56 | STARS: 480+ | STUDENT CONTRIBUTORS: 38</text>
+    </g>
+  </g>
+
+  <!-- Overlay Box -->
+  <rect x="80" y="380" width="640" height="85" rx="4" fill="#0D1113" stroke="#252D30" />
+  <text x="105" y="415" font-family="'Space Grotesk', sans-serif" font-size="20" font-weight="bold" fill="#F2F0E8">OPEN SOURCE ACCELERATOR</text>
+  <text x="105" y="445" font-family="'JetBrains Mono', monospace" font-size="12" fill="#58D8D5">INCUBATION SHOWCASE // 8 SHIPMENTS // LINUX FOUNDATION GRANT APPLICANTS</text>
+  <text x="610" y="430" font-family="'JetBrains Mono', monospace" font-size="12" fill="#F4C542">JUL 2025</text>
+</svg>

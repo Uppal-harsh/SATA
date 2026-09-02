@@ -1,0 +1,97 @@
+/* ==========================================================================
+   SATA ANIMATIONS & KEYFRAMES
+   ========================================================================== */
+
+@keyframes pulse-dot {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.35);
+    opacity: 0.6;
+  }
+}
+
+@keyframes float-subtle {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.5deg);
+  }
+}
+
+@keyframes rotate-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-slow-rev {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes glow-breathe-amber {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(244, 197, 66, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(244, 197, 66, 0.45);
+  }
+}
+
+@keyframes glow-breathe-cyan {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(88, 216, 213, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(88, 216, 213, 0.45);
+  }
+}
+
+/* Scroll Reveal States */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Delay modifiers */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+
+/* Custom High-Tech Pointer Beacon */
+.pointer-glow-beacon {
+  position: fixed;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(88, 216, 213, 0.04) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease;
+}
+
+@media (pointer: coarse) {
+  .pointer-glow-beacon {
+    display: none;
+  }
+}

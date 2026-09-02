@@ -1,0 +1,415 @@
+/* ==========================================================================
+   SATA DESIGN SYSTEM & FOUNDATION TOKENS
+   Strict Color Grading:
+   - Primary Background: #080B0D (Deep charcoal / near-black)
+   - Primary Cool Accent: #58D8D5 (Cyan / Teal - Brain side / Tech / Action / Upcoming)
+   - Primary Warm Accent: #F4C542 (Warm Amber / Yellow - Bulb side / Ideas / History / Archive)
+   - Primary Text: #F2F0E8 (Off-white / Warm white)
+   - Secondary Text: #8D9699 (Muted cool gray)
+   - Surfaces: #101416, #151A1C, #1B2022
+   - Borders: #252D30, #313C40
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Space+Grotesk:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Workspace & Surfaces */
+  --bg-primary: #080B0D;
+  --bg-secondary: #0D1113;
+  --surface-1: #101416;
+  --surface-2: #151A1C;
+  --surface-3: #1B2022;
+  --surface-card: #121719;
+  --surface-hover: #1E2528;
+
+  /* Borders & Reticles */
+  --border-subtle: #1F2629;
+  --border-default: #252D30;
+  --border-strong: #364247;
+  --border-amber: rgba(244, 197, 66, 0.4);
+  --border-cyan: rgba(88, 216, 213, 0.4);
+
+  /* Primary Accents (From Logo) */
+  --accent-amber: #F4C542;
+  --accent-amber-glow: rgba(244, 197, 66, 0.18);
+  --accent-amber-subtle: rgba(244, 197, 66, 0.08);
+  --accent-amber-light: #FFF2A3;
+
+  --accent-cyan: #58D8D5;
+  --accent-cyan-glow: rgba(88, 216, 213, 0.18);
+  --accent-cyan-subtle: rgba(88, 216, 213, 0.08);
+  --accent-cyan-light: #A2FAF8;
+
+  /* Typography */
+  --text-main: #F2F0E8;
+  --text-secondary: #8D9699;
+  --text-muted: #5C6568;
+  --text-inverse: #080B0D;
+
+  /* Fonts */
+  --font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'IBM Plex Mono', monospace;
+
+  /* Transitions & Radii */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 0.18s var(--ease-out-expo);
+  --transition-normal: 0.32s var(--ease-out-expo);
+  --transition-slow: 0.6s var(--ease-out-expo);
+
+  /* Layout */
+  --max-width: 1360px;
+  --section-padding-y: 120px;
+  --nav-height: 72px;
+}
+
+/* Reset & Global Defaults */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Selection */
+::selection {
+  background: var(--accent-cyan);
+  color: #080B0D;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-default);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-strong);
+}
+
+/* Background Atmosphere Canvas */
+#atmosphere-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Grid Line Subtle Overlay */
+.schematic-grid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+  background-size: 80px 80px;
+  background-image: 
+    linear-gradient(to right, rgba(37, 45, 48, 0.15) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(37, 45, 48, 0.15) 1px, transparent 1px);
+  mask-image: radial-gradient(circle at center, black 40%, transparent 90%);
+  -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 90%);
+}
+
+/* Layout Utilities */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 32px;
+  position: relative;
+  z-index: 2;
+}
+
+.container-wide {
+  width: 100%;
+  max-width: 1520px;
+  margin: 0 auto;
+  padding: 0 32px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Typography Classes */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.text-amber {
+  color: var(--accent-amber);
+}
+
+.text-cyan {
+  color: var(--accent-cyan);
+}
+
+.text-muted {
+  color: var(--text-secondary);
+}
+
+/* Section Header Structure */
+.section-header {
+  margin-bottom: 64px;
+}
+
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  padding: 4px 10px;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--border-default);
+  background: rgba(16, 20, 22, 0.6);
+  backdrop-filter: blur(8px);
+}
+
+.section-tag.amber {
+  color: var(--accent-amber);
+  border-color: rgba(244, 197, 66, 0.3);
+}
+
+.section-tag.cyan {
+  color: var(--accent-cyan);
+  border-color: rgba(88, 216, 213, 0.3);
+}
+
+.section-tag::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+.section-title {
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+}
+
+.section-description {
+  font-size: clamp(1rem, 1.3vw, 1.2rem);
+  color: var(--text-secondary);
+  max-width: 640px;
+  line-height: 1.6;
+}
+
+/* Buttons & Interactive Elements */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 13px 26px;
+  border-radius: var(--radius-xs);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+}
+
+.btn-cyan {
+  background-color: var(--accent-cyan);
+  color: #080B0D;
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 20px rgba(88, 216, 213, 0.2);
+}
+
+.btn-cyan:hover {
+  background-color: var(--accent-cyan-light);
+  box-shadow: 0 0 30px rgba(88, 216, 213, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-amber {
+  background-color: var(--accent-amber);
+  color: #080B0D;
+  border-color: var(--accent-amber);
+  box-shadow: 0 0 20px rgba(244, 197, 66, 0.2);
+}
+
+.btn-amber:hover {
+  background-color: var(--accent-amber-light);
+  box-shadow: 0 0 30px rgba(244, 197, 66, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--text-main);
+  border-color: var(--border-strong);
+}
+
+.btn-outline:hover {
+  border-color: var(--text-main);
+  background: rgba(242, 240, 232, 0.05);
+  transform: translateY(-2px);
+}
+
+.btn-outline-cyan {
+  background-color: transparent;
+  color: var(--accent-cyan);
+  border-color: rgba(88, 216, 213, 0.5);
+}
+
+.btn-outline-cyan:hover {
+  border-color: var(--accent-cyan);
+  background: var(--accent-cyan-subtle);
+  transform: translateY(-2px);
+}
+
+.btn-outline-amber {
+  background-color: transparent;
+  color: var(--accent-amber);
+  border-color: rgba(244, 197, 66, 0.5);
+}
+
+.btn-outline-amber:hover {
+  border-color: var(--accent-amber);
+  background: var(--accent-amber-subtle);
+  transform: translateY(-2px);
+}
+
+/* Technical Corner Reticles & Badges */
+.tech-box {
+  position: relative;
+  background: var(--surface-1);
+  border: 1px solid var(--border-default);
+  padding: 32px;
+  border-radius: var(--radius-xs);
+  transition: border-color var(--transition-normal);
+}
+
+.tech-box::before, .tech-box::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  pointer-events: none;
+}
+
+.tech-box::before {
+  top: -1px;
+  left: -1px;
+  border-top: 2px solid var(--border-strong);
+  border-left: 2px solid var(--border-strong);
+}
+
+.tech-box::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 2px solid var(--border-strong);
+  border-right: 2px solid var(--border-strong);
+}
+
+.tech-box.amber:hover {
+  border-color: rgba(244, 197, 66, 0.5);
+}
+.tech-box.amber:hover::before, .tech-box.amber:hover::after {
+  border-color: var(--accent-amber);
+}
+
+.tech-box.cyan:hover {
+  border-color: rgba(88, 216, 213, 0.5);
+}
+.tech-box.cyan:hover::before, .tech-box.cyan:hover::after {
+  border-color: var(--accent-cyan);
+}
+
+/* Subtle Glow Backdrop utilities */
+.glow-amber-bg {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(244, 197, 66, 0.12) 0%, rgba(244, 197, 66, 0) 70%);
+  filter: blur(40px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.glow-cyan-bg {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(88, 216, 213, 0.12) 0%, rgba(88, 216, 213, 0) 70%);
+  filter: blur(40px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Coordinate / Telemetry Badges */
+.telemetry-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.telemetry-tag span {
+  color: var(--accent-cyan);
+}

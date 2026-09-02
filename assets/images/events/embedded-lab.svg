@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="el-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#12171A" />
+      <stop offset="100%" stop-color="#080B0D" />
+    </linearGradient>
+    <radialGradient id="el-cyan" cx="70%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#58D8D5" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#58D8D5" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#el-bg)" />
+  <rect width="800" height="500" fill="url(#el-cyan)" />
+
+  <!-- Hardware Schematics / Robotics Blueprint -->
+  <g transform="translate(140, 70)">
+    <!-- Circuit Board -->
+    <rect x="0" y="0" width="520" height="270" rx="6" fill="#0E1315" stroke="#252D30" stroke-width="1.5" />
+    <!-- MCU -->
+    <rect x="200" y="70" width="120" height="120" rx="3" fill="#151A1C" stroke="#58D8D5" stroke-width="2" />
+    <text x="218" y="135" font-family="'JetBrains Mono', monospace" font-size="12" fill="#58D8D5">STM32-H7</text>
+    
+    <!-- Pin Traces -->
+    <g stroke="#58D8D5" stroke-width="1.5" fill="none">
+      <path d="M 200,90 L 100,90 L 60,60" />
+      <circle cx="60" cy="60" r="4" fill="#58D8D5" />
+      <path d="M 200,120 L 70,120" />
+      <circle cx="70" cy="120" r="4" fill="#58D8D5" />
+      <path d="M 200,150 L 120,150 L 60,200" />
+      <circle cx="60" cy="200" r="4" fill="#58D8D5" />
+      
+      <path d="M 320,90 L 420,90 L 460,60" stroke="#F4C542" />
+      <circle cx="460" cy="60" r="4" fill="#F4C542" />
+      <path d="M 320,120 L 450,120" stroke="#F4C542" />
+      <circle cx="450" cy="120" r="4" fill="#F4C542" />
+      <path d="M 320,150 L 400,150 L 460,200" stroke="#F4C542" />
+      <circle cx="460" cy="200" r="4" fill="#F4C542" />
+    </g>
+
+    <!-- Oscilloscope line in board -->
+    <path d="M 120,230 Q 140,210 160,230 T 200,230 T 240,230 T 280,230 T 320,230 T 360,230" stroke="#58D8D5" stroke-width="1.5" fill="none" opacity="0.8" />
+  </g>
+
+  <!-- Overlay Box -->
+  <rect x="80" y="380" width="640" height="85" rx="4" fill="#0D1113" stroke="#252D30" />
+  <text x="105" y="415" font-family="'Space Grotesk', sans-serif" font-size="20" font-weight="bold" fill="#F2F0E8">EMBEDDED IOT &amp; ROBOTICS LAB</text>
+  <text x="105" y="445" font-family="'JetBrains Mono', monospace" font-size="12" fill="#58D8D5">HANDS-ON HARDWARE // SENSOR FUSION &amp; CAN-BUS // 62 PARTICIPANTS</text>
+  <text x="610" y="430" font-family="'JetBrains Mono', monospace" font-size="12" fill="#F4C542">OCT 2025</text>
+</svg>
