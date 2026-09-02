@@ -7,7 +7,7 @@ export function NetworkMatrix({ audio }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedDomain, setSelectedDomain] = useState('ALL');
 
-  const domains = ['ALL', 'Leadership', 'Development', 'Design', 'AI / ML', 'Embedded', 'Operations', 'Content'];
+  const domains = ['ALL', 'Leadership', 'Technical', 'Operations', 'Content & Design', 'Marketing', 'Coverage'];
 
   const filteredMembers = SATA_DATA.members.filter(m => {
     const matchesDomain = selectedDomain === 'ALL' || m.domain === selectedDomain;
@@ -16,7 +16,9 @@ export function NetworkMatrix({ audio }) {
       m.name.toLowerCase().includes(query) ||
       m.focus.toLowerCase().includes(query) ||
       m.domain.toLowerCase().includes(query) ||
-      m.year.toLowerCase().includes(query);
+      m.year.toLowerCase().includes(query) ||
+      (m.email && m.email.toLowerCase().includes(query)) ||
+      (m.enrollment && m.enrollment.toLowerCase().includes(query));
     return matchesDomain && matchesQuery;
   });
 
@@ -45,7 +47,7 @@ export function NetworkMatrix({ audio }) {
               <input
                 type="text"
                 className="network-search-input"
-                placeholder="Search active nodes by name, domain, batch..."
+                placeholder="Search active nodes by name, domain, email, roll no..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
@@ -102,7 +104,10 @@ export function NetworkMatrix({ audio }) {
                     transition={{ duration: 0.25, delay: idx * 0.02 }}
                   >
                     <span className="net-num">{m.num}</span>
-                    <span className="net-name">{m.name}</span>
+                    <span className="net-name">
+                      <span style={{ fontWeight: 600, color: 'var(--text-primary)' }}>{m.name}</span>
+                      {m.email && <span style={{ display: 'block', fontSize: '0.72rem', color: 'var(--text-muted)', fontFamily: 'var(--font-mono)', marginTop: '2px' }}>{m.email}</span>}
+                    </span>
                     <span className="net-domain">{m.domain}</span>
                     <span className="net-focus">{m.focus}</span>
                     <span className="net-year">{m.year}</span>

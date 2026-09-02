@@ -28,7 +28,7 @@ const SATA_DATA = {
         "Top 3 teams secured seed grants from SATA Incubation Fund.",
         "Featured breakthrough projects: AeroSense drone telemetry & KryptonOS microkernel."
       ],
-      organizers: ["Devansh (President)", "Janya Sharma (Vice President)", "Anushka (Tech Lead)", "Harsh Chahal (Ops Lead)"]
+      organizers: ["Devansh (President)", "Janya Sharma (Vice President)", "Harsh Uppal (Tech Lead)", "Harsh Chahal (Content & Design)"]
     },
     {
       id: "sata-ev-06",
@@ -50,7 +50,7 @@ const SATA_DATA = {
         "Demonstrated 12ms inference latency for on-device voice commands.",
         "Full open-source lab workbook released to community."
       ],
-      organizers: ["Gyanesh Nayak (AI Lead)", "Anushka (Tech Lead)", "Devansh (President)"]
+      organizers: ["Gyanesh Kumar Nayak (Technical Team)", "Harsh Uppal (Tech Lead)", "Devansh (President)"]
     },
     {
       id: "sata-ev-05",
@@ -72,7 +72,7 @@ const SATA_DATA = {
         "Initiated the SATAMesh campus wireless radio project.",
         "Student Q&A with distributed systems engineers."
       ],
-      organizers: ["Devansh (President)", "Janya Sharma (Vice President)", "Bhavika Bansal (Design Lead)"]
+      organizers: ["Devansh (President)", "Janya Sharma (Vice President)", "Ashwika Sharma (General Secretary)"]
     },
     {
       id: "sata-ev-04",
@@ -94,7 +94,7 @@ const SATA_DATA = {
         "Zero hardware component failures during 6-hour endurance test.",
         "Established the SATA Embedded Hardware Lending Vault."
       ],
-      organizers: ["Hardik Wadhwa (Hardware Lead)", "Harsh Chahal (Ops Lead)", "Tapesh (Robotics)"]
+      organizers: ["Hardik (Treasurer)", "Tapesh Jaat (Operations)", "Vaibhav Jangra (Operations)"]
     },
     {
       id: "sata-ev-03",
@@ -116,7 +116,7 @@ const SATA_DATA = {
         "Fastest solve recorded in 12 milliseconds in C++20.",
         "Winner sponsored for ACM ICPC Regional qualifiers."
       ],
-      organizers: ["Anushka (Tech Lead)", "Devansh (President)", "Taksh Yadav (Development)"]
+      organizers: ["Harsh Uppal (Tech Lead)", "Devansh (President)", "Taksh Yadav (Marketing)"]
     },
     {
       id: "sata-ev-02",
@@ -138,7 +138,7 @@ const SATA_DATA = {
         "2 projects nominated for international open source fellowships.",
         "SATA Open Source Guide published."
       ],
-      organizers: ["Devansh (President)", "Janya Sharma (Vice President)", "Bhavika Bansal (Design Lead)"]
+      organizers: ["Devansh (President)", "Janya Sharma (Vice President)", "Bhavika Bansal (Operations & Events)"]
     }
   ],
 
@@ -231,61 +231,73 @@ const SATA_DATA = {
     {
       id: "lead-03",
       number: "03",
-      role: "TECH LEAD",
-      name: "ANUSHKA",
-      responsibility: "SYSTEMS & INFRASTRUCTURE (CSE 4)",
-      bio: "Technical architect and 4th-year Computer Science specialist. Oversees server clusters, bare-metal project pipelines, and code architecture standards across SATA labs.",
+      role: "TECHNICAL LEAD",
+      name: "HARSH UPPAL",
+      responsibility: "SYSTEMS ARCHITECTURE & DEV",
+      bio: "Technical Lead directing core software architecture, web infrastructure, project pipelines, and technical execution across all SATA initiatives.",
       accent: "amber",
-      image: "assets/images/people/anushka.svg",
-      github: "https://github.com/anushka-cse",
+      image: "assets/images/people/harsh-uppal.svg",
+      github: "https://github.com/harshuppal",
       linkedin: "https://linkedin.com"
     },
     {
       id: "lead-04",
       number: "04",
-      role: "DESIGN LEAD",
-      name: "BHAVIKA BANSAL",
-      responsibility: "VISUAL & EXPERIENCE SYSTEMS",
-      bio: "Design engineer shaping SATA's visual brand, digital UI/UX frameworks, exhibition aesthetics, and typography systems.",
+      role: "GENERAL SECRETARY",
+      name: "ASHWIKA SHARMA",
+      responsibility: "GOVERNANCE & ADMINISTRATION",
+      bio: "General Secretary managing club governance, organizational documentation, institutional relations, and cross-departmental coordination.",
       accent: "cyan",
-      image: "assets/images/people/bhavika-bansal.svg",
-      github: "https://github.com/bhavikabansal-design",
+      image: "assets/images/people/ashwika-sharma.svg",
+      github: "https://github.com/ashwika-sharma",
       linkedin: "https://linkedin.com"
     },
     {
       id: "lead-05",
       number: "05",
-      role: "AI & RESEARCH LEAD",
-      name: "GYANESH NAYAK",
-      responsibility: "AUTONOMOUS AGENTS & ML SYSTEMS",
-      bio: "Machine learning researcher focused on on-device LLM fine-tuning, model quantization, and neuro-symbolic agent workflows. Leads SATA AI Build Nights.",
+      role: "TREASURER",
+      name: "HARDIK",
+      responsibility: "FINANCE & BUDGET ALLOCATION",
+      bio: "Treasurer overseeing financial planning, hardware lab funding, hackathon budget allocations, sponsorship management, and resource disbursements.",
       accent: "amber",
-      image: "assets/images/people/gyanesh-nayak.svg",
-      github: "https://github.com/gyaneshnayak-ai",
+      image: "assets/images/people/hardik-wadhwa.svg",
+      github: "https://github.com/hardik-sata",
       linkedin: "https://linkedin.com"
     },
     {
       id: "lead-06",
       number: "06",
-      role: "HARDWARE LEAD",
-      name: "HARDIK WADHWA",
-      responsibility: "EMBEDDED LABS & ROBOTICS",
-      bio: "Hardware engineer managing PCB design, microcontroller flashing benches, sensor fusion systems, and autonomous robotics prototypes.",
+      role: "TECHNICAL TEAM",
+      name: "GYANESH KUMAR NAYAK",
+      responsibility: "AI SYSTEMS & INTELLIGENCE",
+      bio: "Core technical team member specializing in machine learning systems, on-device intelligence, neural architectures, and software engineering.",
       accent: "cyan",
-      image: "assets/images/people/hardik-wadhwa.svg",
-      github: "https://github.com/hardikwadhwa-hw",
+      image: "assets/images/people/gyanesh-nayak.svg",
+      github: "https://github.com/gyaneshnayak-ai",
       linkedin: "https://linkedin.com"
     },
     {
       id: "lead-07",
       number: "07",
-      role: "OPERATIONS LEAD",
+      role: "CONTENT & DESIGN",
       name: "HARSH CHAHAL",
-      responsibility: "OPERATIONS & EVENT MANAGEMENT",
-      bio: "Operational strategist managing event timelines, logistics, university administration, and community engagement for all SATA active members.",
+      responsibility: "CREATIVE & BRAND STRATEGY",
+      bio: "Leading creative direction, visual brand identity, digital UI design, and multimedia communications across all SATA channels.",
       accent: "amber",
       image: "assets/images/people/harsh-chahal.svg",
       github: "https://github.com/harshchahal-ops",
+      linkedin: "https://linkedin.com"
+    },
+    {
+      id: "lead-08",
+      number: "08",
+      role: "OPERATIONS & EVENTS",
+      name: "BHAVIKA BANSAL",
+      responsibility: "LOGISTICS & EVENT MANAGEMENT",
+      bio: "Operations lead managing event timelines, venue logistics, hackathon stage management, speaker relations, and operational coordination.",
+      accent: "cyan",
+      image: "assets/images/people/bhavika-bansal.svg",
+      github: "https://github.com/bhavikabansal-design",
       linkedin: "https://linkedin.com"
     }
   ],
@@ -294,21 +306,22 @@ const SATA_DATA = {
   // SATA ACTIVE MEMBER DIRECTORY (OFFICIAL ROSTER)
   // --------------------------------------------------------------------------
   members: [
-    { num: "01", name: "Devansh", domain: "Leadership", focus: "President // Strategy & Systems", year: "4th Year" },
-    { num: "02", name: "Janya Sharma", domain: "Leadership", focus: "Vice President // Community & Execution", year: "3rd Year" },
-    { num: "03", name: "Anushka", domain: "Development", focus: "Tech Lead // Systems & Infra (CSE 4)", year: "4th Year" },
-    { num: "04", name: "Bhavika Bansal", domain: "Design", focus: "Design Lead // Visual & UX Systems", year: "3rd Year" },
-    { num: "05", name: "Akshita", domain: "Development", focus: "Full Stack & Web Engineering", year: "2nd Year" },
-    { num: "06", name: "Ashwika Sharma", domain: "Design", focus: "UI/UX & Creative Media", year: "2nd Year" },
-    { num: "07", name: "Gyanesh Nayak", domain: "AI / ML", focus: "AI Lead // ML & Autonomous Agents", year: "3rd Year" },
-    { num: "08", name: "Hardik Wadhwa", domain: "Embedded", focus: "Hardware Lead // IoT & Embedded Systems", year: "3rd Year" },
-    { num: "09", name: "Harsh Chahal", domain: "Operations", focus: "Ops Lead // Logistics & Events", year: "3rd Year" },
-    { num: "10", name: "Rishita Roy", domain: "Development", focus: "Frontend & Interactive Systems", year: "2nd Year" },
-    { num: "11", name: "Shubhi Vajpayee", domain: "Content", focus: "Content Strategy & Technical Writing", year: "2nd Year" },
-    { num: "12", name: "Sneha Jangra", domain: "Operations", focus: "Community Outreach & Relations", year: "2nd Year" },
-    { num: "13", name: "Taksh Yadav", domain: "Development", focus: "Systems Programming & Cloud", year: "3rd Year" },
-    { num: "14", name: "Tapesh", domain: "Embedded", focus: "Hardware Lab & Robotics Prototyping", year: "2nd Year" },
-    { num: "15", name: "Vaibhav Jangra", domain: "Development", focus: "Cybersecurity & Network Protocols", year: "3rd Year" }
+    { num: "01", name: "Devansh", domain: "Leadership", focus: "President // Strategy & Systems", year: "4th Year", email: "devansh@bmu.edu.in", enrollment: "220101" },
+    { num: "02", name: "Janya Sharma", domain: "Leadership", focus: "Vice President // Community & Execution", year: "3rd Year", email: "janya.sharma@bmu.edu.in", enrollment: "230204" },
+    { num: "03", name: "Harsh Uppal", domain: "Technical", focus: "Technical Lead // Systems & Web Architecture", year: "2nd Year (25CSE)", email: "harsh.uppal.25cse@bmu.edu.in", enrollment: "250389" },
+    { num: "04", name: "Ashwika Sharma", domain: "Leadership", focus: "General Secretary // Administration & Governance", year: "3rd Year (24CSE)", email: "ashwika.sharma.24cse@bmu.edu.in", enrollment: "240411" },
+    { num: "05", name: "Hardik", domain: "Leadership", focus: "Treasurer // Finance & Budget Allocation", year: "3rd Year (24CSE)", email: "hardik.24cse@bmu.edu.in", enrollment: "240463" },
+    { num: "06", name: "Gyanesh Kumar Nayak", domain: "Technical", focus: "Technical Team // AI & Machine Learning", year: "3rd Year (24CSE)", email: "gyaneshkumar.nayak.24cse@bmu.edu.in", enrollment: "240462" },
+    { num: "07", name: "Tapesh Jaat", domain: "Operations", focus: "Operations & Events // Logistics & Planning", year: "2nd Year (25CSE)", email: "tapesh.jaat.25cse@bmu.edu.in", enrollment: "250853" },
+    { num: "08", name: "Bhavika Bansal", domain: "Operations", focus: "Operations & Events // Event Coordination", year: "2nd Year (25CSE)", email: "bhavika.bansal.25cse@bmu.edu.in", enrollment: "250338" },
+    { num: "09", name: "Vaibhav Jangra", domain: "Operations", focus: "Operations & Events // Stage & Venue Operations", year: "2nd Year (25CSE)", email: "vaibhav.jangra.25cse@bmu.edu.in", enrollment: "250602" },
+    { num: "10", name: "Harsh Chahal", domain: "Content & Design", focus: "Content & Design // Creative Direction & Branding", year: "2nd Year (25CSE)", email: "harsh.chahal.25cse@bmu.edu.in", enrollment: "250850" },
+    { num: "11", name: "Akshita Setia", domain: "Content & Design", focus: "Content & Design // Graphic Design & Visuals", year: "2nd Year (25CSE)", email: "akshita.setia.25cse@bmu.edu.in", enrollment: "250655" },
+    { num: "12", name: "Anushka", domain: "Content & Design", focus: "Content & Design // UI/UX & Digital Media", year: "2nd Year (25CSE)", email: "anushka.25cse@bmu.edu.in", enrollment: "250313" },
+    { num: "13", name: "Taksh Yadav", domain: "Marketing", focus: "Marketing & Comms // Outreach & PR Strategy", year: "2nd Year (25CSE)", email: "taksh.yadav.25cse@bmu.edu.in", enrollment: "250583" },
+    { num: "14", name: "Rishita Roy", domain: "Marketing", focus: "Marketing & Comms // Digital Campaigns & Promotion", year: "2nd Year (25CSE)", email: "rishita.roy.25cse@bmu.edu.in", enrollment: "250516" },
+    { num: "15", name: "Shubhi Vajpayee", domain: "Coverage", focus: "Coverage & Social Media // Photography & Feeds", year: "2nd Year (25CSE)", email: "shubhi.vajpayee.25cse@bmu.edu.in", enrollment: "250862" },
+    { num: "16", name: "Sneha Jangra", domain: "Coverage", focus: "Coverage & Social Media // Community Media & Content", year: "2nd Year (25CSE)", email: "sneha.jangra.25cse@bmu.edu.in", enrollment: "250573" }
   ],
 
   // --------------------------------------------------------------------------

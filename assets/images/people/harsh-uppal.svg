@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="p-bg-harsh-uppal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#181D20" />
+      <stop offset="100%" stop-color="#090C0E" />
+    </linearGradient>
+    <radialGradient id="p-glow-harsh-uppal" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#F4C542" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#F4C542" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="400" height="480" fill="url(#p-bg-harsh-uppal)" />
+  <rect width="400" height="480" fill="url(#p-glow-harsh-uppal)" />
+
+  <!-- Grid Reticles -->
+  <g stroke="#222A2E" stroke-width="1">
+    <line x1="30" y1="0" x2="30" y2="480" stroke-dasharray="4 4" />
+    <line x1="370" y1="0" x2="370" y2="480" stroke-dasharray="4 4" />
+    <line x1="0" y1="360" x2="400" y2="360" />
+  </g>
+
+  <!-- Editorial Silhouette & Tech Lead Glyph -->
+  <g transform="translate(100, 70)">
+    <circle cx="100" cy="80" r="54" fill="#182024" stroke="#F4C542" stroke-width="1.5" />
+    <path d="M 30,220 C 30,150 80,140 100,140 C 120,140 170,150 170,220 Z" fill="#101518" stroke="#2D383D" stroke-width="1.5" />
+    <!-- Tech Lead Terminal Nodes & Code Glyph -->
+    <rect x="78" y="72" width="44" height="14" rx="3" fill="#0D1113" stroke="#F4C542" stroke-width="1.5" />
+    <path d="M 86,79 L 91,79 M 95,76 L 98,79 L 95,82 M 103,81 L 112,81" stroke="#F4C542" stroke-width="1.2" stroke-linecap="round" fill="none" />
+    <!-- Architecture Chevron -->
+    <path d="M 85,145 L 100,165 L 115,145" stroke="#F4C542" stroke-width="1.8" fill="none" />
+    <circle cx="100" cy="180" r="3.5" fill="#F4C542" />
+  </g>
+
+  <!-- Badge Metadata Overlay -->
+  <g transform="translate(30, 380)">
+    <text x="0" y="20" font-family="'JetBrains Mono', monospace" font-size="11" fill="#F4C542" font-weight="bold">PANEL FILE // 03</text>
+    <text x="0" y="46" font-family="'Space Grotesk', sans-serif" font-size="22" font-weight="800" fill="#F2F0E8">HARSH UPPAL</text>
+    <text x="0" y="68" font-family="'JetBrains Mono', monospace" font-size="11" fill="#8D9699">TECHNICAL LEAD // ARCHITECTURE &amp; SYSTEMS</text>
+  </g>
+
+  <!-- Corner Brackets -->
+  <g stroke="#F4C542" stroke-width="1.5" fill="none">
+    <path d="M 15,30 L 15,15 L 30,15" />
+    <path d="M 385,30 L 385,15 L 370,15" />
+    <path d="M 15,450 L 15,465 L 30,465" />
+    <path d="M 385,450 L 385,465 L 370,465" />
+  </g>
+</svg>
